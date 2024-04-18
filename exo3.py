@@ -9,7 +9,8 @@ data = []
 for page in range(1, 11):
     response = requests.get(base_url.format(page))
     if response.status_code == 200:
-        print(f"Processing page {page}...")
+        print(f"Recherche dans la page 
+               {page}...")
         soup = BeautifulSoup(response.text, 'html.parser')
         rows = soup.find_all('tr', class_='team')
 
